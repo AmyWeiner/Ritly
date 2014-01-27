@@ -11,12 +11,19 @@ class LinksController < ApplicationController
 		link = params.require(:link).permit(:url, :random_string)
 	    @link = Link.create(link)
 		#redirect_to "/go"
-		redirect_to link_path(@link.id)
+		redirect_to link_path(@link.random_string)
 	end
 
 	def show
+		@link = Link.find_by(random_string: params[:random_string])
+		render :show
+	end
+
+	def redirect
 		id = params[:id]
         @link = Link.find(id)
+		url = @link.url
+		redirect_to url
 	end
 
 end

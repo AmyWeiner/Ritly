@@ -6,5 +6,8 @@ RitlyApp::Application.routes.draw do
 
   post '/go', to: 'links#create'
 
-  get '/go/:id/preview', to: 'links#show', as: 'link'
+  get 'go/:id', to: 'links#redirect'
+
+  get '/go/:random_string/preview', to: 'links#show', as: 'link'
+
 end
