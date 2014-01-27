@@ -10,7 +10,6 @@ class LinksController < ApplicationController
         params[:link][:random_string] = @random_string
 		link = params.require(:link).permit(:url, :random_string)
 	    @link = Link.create(link)
-		#redirect_to "/go"
 		redirect_to link_preview_path(@link.random_string)
 	end
 

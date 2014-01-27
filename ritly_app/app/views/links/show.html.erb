@@ -9,8 +9,8 @@
     Random String: <%= @link.random_string %> 
 </div>
 
-<% if false %>
-<%=link_to nil,"http://#{@link.url}"%>
-<% end %>
+<div>
+	<a href="http://localhost:3000/go/<%=@link.random_string%>">Click here</a> to go to your site.
+</div>
 
 
