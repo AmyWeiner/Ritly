@@ -1,0 +1,8 @@
+<h1>Welcome to Ritly</h1>
+
+<%= form_for :link, url: go_path, method: :post do |f| %>
+
+<%= f.text_field :url, placeholder: "enter a URL" %> <br>
+
+<%= f.submit %>
+<% end %>
