@@ -1,0 +1,23 @@
+<h1>Signup Page</h1>
+
+<div class="row">
+    <div class="span6 offset3">
+
+        <%= form_for (@user) do |f| %>
+        
+        <%= f.label :name %>
+		<%= f.text_field :name, placeholder: "enter username" %></br>
+
+		<%= f.label :email %>
+		<%= f.text_field :email, placeholder: "enter email" %></br>
+
+		<%= f.label :password %>
+		<%= f.text_field :password, placeholder: "enter password" %></br>
+
+		<%= f.label :password_confirmation, "Confirmation" %>
+		<%= f.password_field :password_confirmation, placeholder: "confirm password" %></br>
+
+		<%= f.submit "Signup", class: "btn btn-large btn-primary" %></br>
+		<% end %>
+    </div>
+</div>
